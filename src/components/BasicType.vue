@@ -42,15 +42,16 @@ export default class BasicType extends Vue {
     console.log('---------------')
 
     // 3、枚举类型Enum
-    /* eslint-disable no-reserved-keys */
-    enum Frameworks1 { Angular, Vue, React }
-    enum Frameworks2 { Angular=10, Vue=21, React }
-    let ng1: Frameworks1 =Frameworks1.Angular
-    let ng2: Frameworks2 = Frameworks2.Angular
-    let v2: Frameworks2 = Frameworks2.Vue
-    console.log(ng1)
-    console.log(ng2)
-    console.log(v2)
+    //Enum类型值是元素的索引，可以自定义Enum值
+    /* eslint-disable quote-props: ["error", "as-needed"] */
+    // enum Frameworks1 { Angular, Vue, React }
+    // enum Frameworks2 { Angular=10, Vue=21, React }
+    // let ng1: Frameworks1 =Frameworks1.Angular
+    // let ng2: Frameworks2 = Frameworks2.Angular
+    // let v2: Frameworks2 = Frameworks2.Vue
+    // console.log(ng1)
+    // console.log(ng2)
+    // console.log(v2)
 
     console.log('---------------')
 
@@ -71,16 +72,22 @@ export default class BasicType extends Vue {
     console.log('---------------')
 
     // 6、Void
-    function log(msg: string): void {
+    function log (msg: string): void {
       console.log(msg)
     }
     log('something...')
+    /* eslint-disable no-undef-init */
+    let void_var = undefined
 
     console.log('---------------')
 
     // 7、Null/Undefined
+    /* eslint-disable no-unused-vars */
     let u: undefined = undefined
     let n: null = null
+
+    // 8、Never类型
+    // Never类型表示所声明值永远不会发生，如可以定义错误处理函数
   }
   mounted () {
     let content = `let a = 1`

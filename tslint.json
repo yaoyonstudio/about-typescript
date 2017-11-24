@@ -4,6 +4,10 @@
         "tslint:recommended"
     ],
     "jsRules": {},
-    "rules": {},
+    "rules": {
+      "no-console": false,
+      "quotemark": [true, "single", "avoid-escape"],
+      "semicolon": [true, "never"]
+    },
     "rulesDirectory": []
 }
