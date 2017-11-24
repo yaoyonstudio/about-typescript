@@ -1,0 +1,77 @@
+basic-vue-typescript是一个vue基本项目整合typescript的例子，独立打包。
+
+配置过程如下：
+
+
+1、vue init webpack typescript-app
+
+2、添加tsconfig.json
+{
+  "compilerOptions": {
+    // this aligns with Vue's browser support
+    "target": "es5",
+    // this enables stricter inference for data properties on `this`
+    "strict": true,
+    // if using webpack 2+ or rollup, to leverage tree shaking:
+    "module": "es2015",
+    "moduleResolution": "node"
+  }
+}
+
+2、添加依赖
+cnpm install --save-dev typescript
+cnpm install --save-dev ts-loader
+
+3、webpack配置
+
+（1）修改入口文件
+main.js => main.ts
+
+（2）添加ts-loader配置
+build/webpack.base.conf.js
+
+{
+  test: /\.ts$/,
+  use: [
+    {
+      loader: 'ts-loader',
+      options: {
+        appendTsSuffixTo: [/\.vue$/]
+      }
+    }
+  ],
+  include: [resolve('src'), resolve('test')],
+  exclude: /node_modules/
+},
+
+（3）resolve中添加.ts文件
+resolve: {
+  extensions: ['.js', '.vue', '.json', '.ts'],
+  alias: {
+    'vue$': 'vue/dist/vue.esm.js',
+    '@': resolve('src')
+  }
+},
+
+
+4、添加vue-loader配置
+build/vue-loader.conf.js
+esModule: true
+
+
+
+==============================================================================
+
+
+此项目实际使用Class-Based Components模式。
+
+
+
+
+
+
+
+
+
+
+
