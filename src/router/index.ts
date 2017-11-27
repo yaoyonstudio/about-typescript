@@ -20,6 +20,7 @@ import Test from '@/components/Test.vue'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       component: HelloWorld,
