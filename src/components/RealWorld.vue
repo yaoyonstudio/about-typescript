@@ -1,5 +1,5 @@
 <template>
-  <div class="test">
+  <div class="RealWorld">
     <h1>{{ msg }}</h1>
   </div>
 </template>
@@ -9,8 +9,8 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 
 @Component
-export default class Test extends Vue {
-  msg: string = 'TEST'
+export default class RealWorld extends Vue {
+  msg: string = 'RealWorld Example'
   created () {
   }
   mounted () {

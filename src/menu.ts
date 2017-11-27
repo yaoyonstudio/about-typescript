@@ -1,51 +1,81 @@
 const menus = [
   {
     id: 1,
-    title: 'Type System',
-    name: 'type',
+    items: [],
     link: '/type',
+    name: 'type',
     showMore: true,
-    items: []
+    title: 'Type System'
   },
   {
     id: 2,
-    title: 'Interface',
+    items: [],
     link: '/interface',
     showMore: true,
-    items: []
+    title: 'Interface'
   },
   {
     id: 3,
-    title: 'Classes',
+    items: [],
     link: '/classes',
     showMore: true,
-    items: []
+    title: 'Classes'
   },
   {
     id: 3,
-    title: 'Functions',
+    items: [],
     link: '/functions',
     showMore: true,
-    items: []
+    title: 'Functions'
   },
   {
     id: 3,
-    title: 'Generics',
+    items: [],
     link: '/generics',
     showMore: true,
-    items: []
+    title: 'Generics'
   },
   {
     id: 3,
-    title: 'Modules',
+    items: [],
     link: '/modules',
     showMore: true,
-    items: []
+    title: 'Modules',
+  },
+  {
+    id: 3,
+    items: [],
+    link: '/mixins',
+    showMore: true,
+    title: 'Mixins',
+  },
+  {
+    id: 3,
+    items: [],
+    link: '/async_await',
+    showMore: true,
+    title: 'Async/Await',
+  },
+  {
+    id: 3,
+    items: [
+      {id: 1, link: '/real-world/slider', title: 'Slider'}
+    ],
+    link: '/real-world',
+    showMore: true,
+    title: 'RealWorld',
+  },
+  {
+    id: 3,
+    items: [],
+    link: '/test',
+    showMore: true,
+    title: 'Test',
   },
 ]
 
 module.exports = {
-  getMenus: function () {
+  getMenus: () => {
     return menus
   }
 }

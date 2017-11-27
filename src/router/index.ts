@@ -1,54 +1,85 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import HelloWorld from '@/components/HelloWorld'
+import HelloWorld from '@/components/HelloWorld.vue'
 
-import BasicType from '@/components/BasicType'
-import Interface from '@/components/Interface'
-import Classes from '@/components/Classes'
-import Functions from '@/components/Functions'
-import Generics from '@/components/Generics'
-import Modules from '@/components/Modules'
+import AsyncAwait from '@/components/AsyncAwait.vue'
+import BasicType from '@/components/BasicType.vue'
+import Classes from '@/components/Classes.vue'
+import Functions from '@/components/Functions.vue'
+import Generics from '@/components/Generics.vue'
+import Interface from '@/components/Interface.vue'
+import Mixins from '@/components/Mixins.vue'
+import Modules from '@/components/Modules.vue'
 
+import Slider from '@/components/real-world/Slider.vue'
+import RealWorld from '@/components/RealWorld.vue'
+
+import Test from '@/components/Test.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
+      component: HelloWorld,
       name: 'HelloWorld',
-      component: HelloWorld
+      path: '/'
     },
     {
-      path: '/type',
+      component: BasicType,
       name: 'BasicType',
-      component: BasicType
+      path: '/type'
     },
     {
-      path: '/interface',
+      component: Interface,
       name: 'Interface',
-      component: Interface
+      path: '/interface'
     },
     {
-      path: '/classes',
+      component: Classes,
       name: 'Classes',
-      component: Classes
+      path: '/classes'
     },
     {
-      path: '/functions',
+      component: Functions,
       name: 'Functions',
-      component: Functions
+      path: '/functions'
     },
     {
-      path: '/generics',
+      component: Generics,
       name: 'Generics',
-      component: Generics
+      path: '/generics'
     },
     {
-      path: '/modules',
+      component: Modules,
       name: 'Modules',
-      component: Modules
+      path: '/modules'
+    },
+    {
+      component: Mixins,
+      name: 'Mixins',
+      path: '/mixins'
+    },
+    {
+      component: AsyncAwait,
+      name: 'AsyncAwait',
+      path: '/async_await'
+    },
+    {
+      component: RealWorld,
+      name: 'RealWorld',
+      path: '/real-world'
+    },
+    {
+      component: Slider,
+      name: 'Slider',
+      path: '/real-world/slider'
+    },
+    {
+      component: Test,
+      name: 'Test',
+      path: '/test'
     },
   ]
 })

@@ -43,6 +43,10 @@ code {
   display: block; width: 100%; height: 400px; font-size: 14px !important; line-height: 16px !important;
 }
 
+h1 {
+  margin-bottom: 10px;
+}
+
 h2 {
   font-weight: 600;
   font-size: 3rem;
@@ -85,6 +89,18 @@ hr {
   }
 }
 
+.btn {
+  display: block;
+  padding: .8rem 1.5rem;
+  background-color: #0a8acd;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+.btn:not(.disable):hover {
+  background-color: #dd3333;
+}
 
 ::-webkit-scrollbar {
   width: 8px;
