@@ -40,7 +40,15 @@ export default class Classes extends Vue {
           return []
         }
       }
+      // 静态方法
+      static walk () {
+        console.log('walking...')
+      }
     }
+
+    Person.walk()
+
+    console.log('----------------------')
 
     const ken = new Person('ken', 18, ['computer'])
     console.log(ken.name)

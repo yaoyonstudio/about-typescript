@@ -11,7 +11,7 @@ module.exports = {
   loaders: utils.cssLoaders({
     sourceMap: sourceMapEnabled,
     extract: isProduction
-  }),
+  }, {ts: 'ts-loader!tslint-loader'}),
   cssSourceMap: sourceMapEnabled,
   cacheBusting: config.dev.cacheBusting,
   esModule: true,

@@ -39,16 +39,16 @@ module.exports = {
           emitWarning: !config.dev.showEslintErrorsInOverlay
         }
       }] : []),
-      // {
-      //   test: /\.(ts|vue)$/,
-      //   loader: 'tslint-loader',
-      //   enforce: 'pre',
-      //   include: [resolve('src'), resolve('test')],
-      //   options: {
-      //     formatter: require('eslint-friendly-formatter'),
-      //     emitWarning: !config.dev.showEslintErrorsInOverlay
-      //   }
-      // },
+      {
+        test: /\.(ts)$/,
+        loader: 'tslint-loader',
+        enforce: 'pre',
+        include: [resolve('src'), resolve('test')],
+        options: {
+          formattersDirectory: 'node_modules/custom-tslint-formatters/formatters',
+          formatter: 'grouped'
+        }
+      },
       {
         test: /\.vue$/,
         loader: 'vue-loader',

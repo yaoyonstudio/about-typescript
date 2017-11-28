@@ -44,5 +44,5 @@ const myApp = new Vue({
   components: { App },
   el: '#app',
   router,
-  template: '<App/>'
+  template: '<App/>',
 })

@@ -2,9 +2,9 @@
   <div class="myLeft">
     <ul>
       <li v-for="(menu, index) in menus" :key="index" class="item">
-        <h4 @click="hrefTo(menu)">{{menu.title}}</h4>
+        <h4 @click="hrefTo(menu)" :class="{'active': $route.path === menu.link}">{{menu.title}}</h4>
         <ul v-show="menu.showMore">
-          <router-link v-for="(subMenu, i) in menu.items" :key="i" :to="subMenu.link" tag="li" class="subItem">{{subMenu.title}}</router-link>
+          <router-link v-for="(subMenu, i) in menu.items" :key="i" :to="subMenu.link" tag="li" class="subItem" :class="{'active': $route.path === subMenu.link}">{{subMenu.title}}</router-link>
         </ul>
       </li>
     </ul>
@@ -44,12 +44,15 @@ export default {
     display: block;
     margin-bottom: .5rem;
     h4 {
+      padding: 0 10px;
+      height: 32px;
+      line-height: 32px;
       cursor: pointer;
       font-size: 1.4rem;
       font-weight: 600;
     }
     h4:hover {
-      color: #0a8acd;
+      color: #dd3333;
     }
     .subItem {
       display: block;
@@ -60,8 +63,18 @@ export default {
       cursor: pointer;
     }
     .subItem:hover {
-      color: #dd3333;
+      color: #007ACC;
     }
+  }
+  h4.active {
+    transition: all .5s;
+    color: #fff;
+    background-color: #0a8acd;
+  }
+  li.active {
+    transition: all .5s;
+    color: #fff;
+    background-color: #dd3333;
   }
 }
 </style>

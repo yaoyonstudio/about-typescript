@@ -5,10 +5,27 @@
     ],
     "jsRules": {},
     "rules": {
-      "no-console": false,
-      "quotemark": [true, "single", "avoid-escape"],
+      "no-console": [true,
+        "debug",
+        "info",
+        "time",
+        "timeEnd",
+        "trace"
+      ],
       "semicolon": [true, "never"],
-      "trailing-comma": false
+      "quotemark": [
+            true,
+            "single"
+        ],
+        "indent": [
+            true
+        ],
+        "interface-name": [
+            false
+        ],
+        "arrow-parens": false,
+        // Pending fix for shorthand property names.
+        "object-literal-sort-keys": false
     },
     "rulesDirectory": []
 }

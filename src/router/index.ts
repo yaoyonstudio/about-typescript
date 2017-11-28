@@ -25,62 +25,62 @@ export default new Router({
     {
       component: HelloWorld,
       name: 'HelloWorld',
-      path: '/'
+      path: '/',
     },
     {
       component: BasicType,
       name: 'BasicType',
-      path: '/type'
+      path: '/type',
     },
     {
       component: Interface,
       name: 'Interface',
-      path: '/interface'
+      path: '/interface',
     },
     {
       component: Classes,
       name: 'Classes',
-      path: '/classes'
+      path: '/classes',
     },
     {
       component: Functions,
       name: 'Functions',
-      path: '/functions'
+      path: '/functions',
     },
     {
       component: Generics,
       name: 'Generics',
-      path: '/generics'
+      path: '/generics',
     },
     {
       component: Modules,
       name: 'Modules',
-      path: '/modules'
+      path: '/modules',
     },
     {
       component: Mixins,
       name: 'Mixins',
-      path: '/mixins'
+      path: '/mixins',
     },
     {
       component: AsyncAwait,
       name: 'AsyncAwait',
-      path: '/async_await'
+      path: '/async_await',
     },
     {
       component: RealWorld,
       name: 'RealWorld',
-      path: '/real-world'
+      path: '/real-world',
     },
     {
       component: Slider,
       name: 'Slider',
-      path: '/real-world/slider'
+      path: '/real-world/slider',
     },
     {
       component: Test,
       name: 'Test',
-      path: '/test'
+      path: '/test',
     },
-  ]
+  ],
 })
