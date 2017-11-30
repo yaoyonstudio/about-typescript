@@ -40,6 +40,11 @@ export default class Classes extends Vue {
           return []
         }
       }
+      addOne () {
+        Person.num++
+      }
+      // 静态成员
+      static num = 0
       // 静态方法
       static walk () {
         console.log('walking...')
@@ -47,6 +52,7 @@ export default class Classes extends Vue {
     }
 
     Person.walk()
+    console.log(Person.num)
 
     console.log('----------------------')
 
@@ -61,6 +67,12 @@ export default class Classes extends Vue {
     console.log(kenny.name)
     console.log(kenny.getAge())
     console.log(kenny.getHobby())
+
+    console.log('----------------------')
+
+    ken.addOne()
+    kenny.addOne()
+    console.log(Person.num)
 
     console.log('----------------------')
 

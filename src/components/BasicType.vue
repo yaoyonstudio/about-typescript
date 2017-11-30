@@ -88,6 +88,21 @@ export default class BasicType extends Vue implements Mixin {
 
     // 8、Never类型
     // Never类型表示所声明值永远不会发生，如可以定义错误处理函数
+
+    // 除了上面的类型，其他复合定义可以使用类、interface或行内类型注释定义
+    // 行内类型注释
+    let newsItem: {
+      id: number,
+      title: string,
+      isshow: boolean,
+      created: number
+    }
+    let newsItem1 = {
+      id: 1,
+      title: '这是新闻标题',
+      isshow: true,
+      created: 14435242341
+    }
   }
   mounted () {
     // console.log(this.myMixinData)
@@ -161,6 +176,21 @@ let n: null = null
 
 // 8、Never类型
 // Never类型表示所声明值永远不会发生，如可以定义错误处理函数
+
+// 除了上面的类型，其他复合定义可以使用类、interface或行内类型注释定义
+// 行内类型注释
+let newsItem: {
+  id: number,
+  title: string,
+  isshow: boolean,
+  created: number
+}
+let newsItem1 = {
+  id: 1,
+  title: '这是新闻标题',
+  isshow: true,
+  created: 14435242341
+}
 `
     this.initEditor('editor', content)
   }

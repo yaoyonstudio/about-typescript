@@ -13,7 +13,11 @@ import Mixin from '../mixin'
 
 import doFun from './materials/doFun'
 
-module News {
+// 声明内部模块NewsModule
+module NewsModule {
+  // 只在News模块里起作用
+  let nums = 10
+
   // newsCate intervace
   export interface INewsCate {
     id: number
@@ -22,6 +26,7 @@ module News {
     isshow: boolean
   }
 
+  // newsComment interface
   export interface INewsComment {
     id: number
     author: string
@@ -44,6 +49,33 @@ module News {
   }
 }
 
+module TestModule {
+  // 导入内部模块NewsModule
+  import NewsItem = NewsModule.INewsItem
+
+  const newsList: NewsItem[] = [
+    {
+      id: 1,
+      title: '新闻标题1',
+      author: 'ken',
+      created: 146832374242,
+      content: '新闻内容1',
+      isTop: false,
+      isshow: true,
+      cate: 1,
+      comments: [
+        {
+          id: 1,
+          author: 'kenny',
+          created: 1454423482943,
+          isshow: true,
+          content: '这是一个好消息'
+        }
+      ]
+    }
+  ]
+}
+
 @Component({
   mixins: [Mixin]
 })
@@ -51,6 +83,7 @@ export default class Modules extends Vue {
   msg: string = 'Modules'
   initEditor: any
   created () {
+
     console.log('-----------------------')
 
     doFun()
